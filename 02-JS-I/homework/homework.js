@@ -2,6 +2,7 @@
 
 // Crea una variable "string", puede contener lo que quieras:
 const nuevaString = 'asds';
+
 // Crea una variable numérica, puede ser cualquier número:
 const nuevoNum = 5;
 
@@ -66,10 +67,11 @@ function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(x===y ){
-    return true;
-  }return false;
+  // if(x===y ){
+  //   return true;
+  // }return false;
     
+  return x === y
   
 }
 
@@ -87,10 +89,11 @@ function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(num<90){
-    return true
-  } return false;
+  // if(num<90){
+  //   return true
+  // } return false;
   
+  return num < 90 
 }
 
 function mayorQueCincuenta(num) {
@@ -134,8 +137,8 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  const potencia = Math.pow(num,2)
-  return potencia;
+  // const potencia = 
+  return Math.pow(num,2);
   
 }
 
@@ -203,13 +206,15 @@ function combinarNombres(nombre, apellido) {
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
   return nombre + ' ' + apellido;
+  // return `${nombre} adasdasd ${apellido}`
 }
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return 'Hola' + ' '+ nombre +'!';
+  // return 'Hola' + ' '+ nombre +'!';
+  return `Hola ${nombre}!`
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
