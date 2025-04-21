@@ -171,13 +171,22 @@ function todosIguales(arreglo) {
 } 
 
 
-function mesesDelAño(array) {
+function mesesDelAno(array) {
   //Dado un array que contiene algunos meses del año desordenados, recorrer 
   // el array buscando los meses de 
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
-  let search = array.filter(function (array){ return })
+  const meses = []
+ for(let i = 0; i < array.length; i++){
+   if(array[i] == "Enero" || array[i] == "Marzo"|| array[i] == "Noviembre"){
+     meses.push(array[i])
+   }
+  }
+  if(meses.length==3){
+    return meses;
+  }else {return "No se encontraron los meses pedidos"}
+
 }
 
 
@@ -185,6 +194,13 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  const mayorcien = []
+for(let i=0; i<array.length; i++){
+  if(array[i]>100){
+    mayorcien.push(array[i])
+  }
+}
+return mayorcien;
 }
 
 
@@ -196,6 +212,19 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  const array = []
+  for(let i=0; i<10; i++){
+    if(numero!=i) {
+      numero += 2;
+      array.push(numero)
+    } else {
+      break;
+    }
+  }
+if(array.length==10){
+  return array
+} 
+  return "Se interrumpió la ejecución"
 }
 
 
@@ -203,9 +232,19 @@ function continueStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array.    
   //Devolver el array
-  //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
+  //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua 
+  // con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  const array = []
+  for(let i=0 ;i<10 ; i++){
+    if(i==5){
+      continue;
+    }
+    numero +=2;
+    array.push(numero)
+  }
+  return array;
 }
 
 
@@ -229,7 +268,7 @@ module.exports = {
   diaDeLaSemana,
   empiezaConNueve,
   todosIguales,
-  mesesDelAño,
+  mesesDelAno,
   mayorACien,
   breakStatement,
   continueStatement

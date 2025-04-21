@@ -16,7 +16,7 @@ const {
   diaDeLaSemana,
   empiezaConNueve,
   todosIguales,
-  mesesDelAño,
+  mesesDelAno,
   mayorACien,
   breakStatement,
   continueStatement
@@ -162,8 +162,8 @@ describe('mesesDelAño(array)', function() {
   it('should return a new array with the requested months', function() {
     var ok = ["Marzo", "Diciembre", "Abril", "Junio", "Julio", "Noviembre", "Enero", "Mayo", "Febrero"];
     var wrong = ["Marzo", "Diciembre", "Julio", "Noviembre"];
-    expect(mesesDelAño(ok)).toEqual(["Marzo", "Noviembre", "Enero"]);
-    expect(mesesDelAño(wrong)).toEqual("No se encontraron los meses pedidos");
+    expect(mesesDelAno(ok)).toEqual(["Marzo", "Noviembre", "Enero"]);
+    expect(mesesDelAno(wrong)).toEqual("No se encontraron los meses pedidos");
   });
 });
 
